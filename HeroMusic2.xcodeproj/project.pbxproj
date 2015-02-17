@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		931C2CAC1A92D0D4006BF682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CAB1A92D0D4006BF682 /* AppDelegate.swift */; };
+		931C2CAF1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CAD1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld */; };
+		931C2CB11A92D0D4006BF682 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CB01A92D0D4006BF682 /* MasterViewController.swift */; };
+		931C2CB31A92D0D4006BF682 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CB21A92D0D4006BF682 /* DetailViewController.swift */; };
+		931C2CB61A92D0D4006BF682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931C2CB41A92D0D4006BF682 /* Main.storyboard */; };
+		931C2CB81A92D0D4006BF682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931C2CB71A92D0D4006BF682 /* Images.xcassets */; };
+		931C2CBB1A92D0D4006BF682 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931C2CB91A92D0D4006BF682 /* LaunchScreen.xib */; };
+		931C2CC71A92D0D5006BF682 /* HeroMusic2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CC61A92D0D5006BF682 /* HeroMusic2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		931C2CC11A92D0D5006BF682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 931C2C9E1A92D0D4006BF682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 931C2CA51A92D0D4006BF682;
+			remoteInfo = HeroMusic2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		931C2CA61A92D0D4006BF682 /* HeroMusic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroMusic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		931C2CAA1A92D0D4006BF682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		931C2CAB1A92D0D4006BF682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		931C2CAE1A92D0D4006BF682 /* HeroMusic2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeroMusic2.xcdatamodel; sourceTree = "<group>"; };
+		931C2CB01A92D0D4006BF682 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		931C2CB21A92D0D4006BF682 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		931C2CB51A92D0D4006BF682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		931C2CB71A92D0D4006BF682 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		931C2CBA1A92D0D4006BF682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		931C2CC01A92D0D5006BF682 /* HeroMusic2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroMusic2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		931C2CC51A92D0D5006BF682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		931C2CC61A92D0D5006BF682 /* HeroMusic2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroMusic2Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		931C2CA31A92D0D4006BF682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931C2CBD1A92D0D5006BF682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		931C2C9D1A92D0D4006BF682 = {
+			isa = PBXGroup;
+			children = (
+				931C2CA81A92D0D4006BF682 /* HeroMusic2 */,
+				931C2CC31A92D0D5006BF682 /* HeroMusic2Tests */,
+				931C2CA71A92D0D4006BF682 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		931C2CA71A92D0D4006BF682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				931C2CA61A92D0D4006BF682 /* HeroMusic2.app */,
+				931C2CC01A92D0D5006BF682 /* HeroMusic2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		931C2CA81A92D0D4006BF682 /* HeroMusic2 */ = {
+			isa = PBXGroup;
+			children = (
+				931C2CAB1A92D0D4006BF682 /* AppDelegate.swift */,
+				931C2CB01A92D0D4006BF682 /* MasterViewController.swift */,
+				931C2CB21A92D0D4006BF682 /* DetailViewController.swift */,
+				931C2CB41A92D0D4006BF682 /* Main.storyboard */,
+				931C2CB71A92D0D4006BF682 /* Images.xcassets */,
+				931C2CB91A92D0D4006BF682 /* LaunchScreen.xib */,
+				931C2CAD1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld */,
+				931C2CA91A92D0D4006BF682 /* Supporting Files */,
+			);
+			path = HeroMusic2;
+			sourceTree = "<group>";
+		};
+		931C2CA91A92D0D4006BF682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				931C2CAA1A92D0D4006BF682 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		931C2CC31A92D0D5006BF682 /* HeroMusic2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				931C2CC61A92D0D5006BF682 /* HeroMusic2Tests.swift */,
+				931C2CC41A92D0D5006BF682 /* Supporting Files */,
+			);
+			path = HeroMusic2Tests;
+			sourceTree = "<group>";
+		};
+		931C2CC41A92D0D5006BF682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				931C2CC51A92D0D5006BF682 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		931C2CA51A92D0D4006BF682 /* HeroMusic2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 931C2CCA1A92D0D5006BF682 /* Build configuration list for PBXNativeTarget "HeroMusic2" */;
+			buildPhases = (
+				931C2CA21A92D0D4006BF682 /* Sources */,
+				931C2CA31A92D0D4006BF682 /* Frameworks */,
+				931C2CA41A92D0D4006BF682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeroMusic2;
+			productName = HeroMusic2;
+			productReference = 931C2CA61A92D0D4006BF682 /* HeroMusic2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		931C2CBF1A92D0D5006BF682 /* HeroMusic2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 931C2CCD1A92D0D5006BF682 /* Build configuration list for PBXNativeTarget "HeroMusic2Tests" */;
+			buildPhases = (
+				931C2CBC1A92D0D5006BF682 /* Sources */,
+				931C2CBD1A92D0D5006BF682 /* Frameworks */,
+				931C2CBE1A92D0D5006BF682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				931C2CC21A92D0D5006BF682 /* PBXTargetDependency */,
+			);
+			name = HeroMusic2Tests;
+			productName = HeroMusic2Tests;
+			productReference = 931C2CC01A92D0D5006BF682 /* HeroMusic2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		931C2C9E1A92D0D4006BF682 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lewis, Kenneth";
+				TargetAttributes = {
+					931C2CA51A92D0D4006BF682 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					931C2CBF1A92D0D5006BF682 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 931C2CA51A92D0D4006BF682;
+					};
+				};
+			};
+			buildConfigurationList = 931C2CA11A92D0D4006BF682 /* Build configuration list for PBXProject "HeroMusic2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 931C2C9D1A92D0D4006BF682;
+			productRefGroup = 931C2CA71A92D0D4006BF682 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				931C2CA51A92D0D4006BF682 /* HeroMusic2 */,
+				931C2CBF1A92D0D5006BF682 /* HeroMusic2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		931C2CA41A92D0D4006BF682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931C2CB61A92D0D4006BF682 /* Main.storyboard in Resources */,
+				931C2CBB1A92D0D4006BF682 /* LaunchScreen.xib in Resources */,
+				931C2CB81A92D0D4006BF682 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931C2CBE1A92D0D5006BF682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		931C2CA21A92D0D4006BF682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931C2CAF1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld in Sources */,
+				931C2CAC1A92D0D4006BF682 /* AppDelegate.swift in Sources */,
+				931C2CB11A92D0D4006BF682 /* MasterViewController.swift in Sources */,
+				931C2CB31A92D0D4006BF682 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931C2CBC1A92D0D5006BF682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931C2CC71A92D0D5006BF682 /* HeroMusic2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		931C2CC21A92D0D5006BF682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 931C2CA51A92D0D4006BF682 /* HeroMusic2 */;
+			targetProxy = 931C2CC11A92D0D5006BF682 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		931C2CB41A92D0D4006BF682 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				931C2CB51A92D0D4006BF682 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		931C2CB91A92D0D4006BF682 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				931C2CBA1A92D0D4006BF682 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		931C2CC81A92D0D5006BF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		931C2CC91A92D0D5006BF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		931C2CCB1A92D0D5006BF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeroMusic2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		931C2CCC1A92D0D5006BF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeroMusic2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		931C2CCE1A92D0D5006BF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeroMusic2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroMusic2.app/HeroMusic2";
+			};
+			name = Debug;
+		};
+		931C2CCF1A92D0D5006BF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeroMusic2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroMusic2.app/HeroMusic2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		931C2CA11A92D0D4006BF682 /* Build configuration list for PBXProject "HeroMusic2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931C2CC81A92D0D5006BF682 /* Debug */,
+				931C2CC91A92D0D5006BF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		931C2CCA1A92D0D5006BF682 /* Build configuration list for PBXNativeTarget "HeroMusic2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931C2CCB1A92D0D5006BF682 /* Debug */,
+				931C2CCC1A92D0D5006BF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		931C2CCD1A92D0D5006BF682 /* Build configuration list for PBXNativeTarget "HeroMusic2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931C2CCE1A92D0D5006BF682 /* Debug */,
+				931C2CCF1A92D0D5006BF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		931C2CAD1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				931C2CAE1A92D0D4006BF682 /* HeroMusic2.xcdatamodel */,
+			);
+			currentVersion = 931C2CAE1A92D0D4006BF682 /* HeroMusic2.xcdatamodel */;
+			path = HeroMusic2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 931C2C9E1A92D0D4006BF682 /* Project object */;
+}
