@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    var detailItem: AnyObject? {
+    
+    var managedObjectContext: NSManagedObjectContext? = nil
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var saveDetailBtn: UIButton!
+   
+    var detailItem: HeroMusic2? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,10 +25,18 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("timeStamp")!.description
-            }
+        let object = self.detailItem as HeroMusic2?
+        println("Has detailItem=\(object)")
+        
+        if let nameField = self.nameTextField {
+            nameField.text = object?.name
+            println("nameField.text=\(nameField.text)")
+        }
+
+        // KRL : cleanup?
+        if let button = self.saveDetailBtn {
+            //saveDetailBtn.addTarget(self, action: "insertNewObject:", forControlEvents: .TouchUpInside)
+            println("button.titleLabel?.text=\(button.titleLabel?.text)")
         }
     }
 
