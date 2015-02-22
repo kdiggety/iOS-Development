@@ -29,30 +29,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        // KRL : The + button will now segue to the detail view controller
-        //let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        //self.navigationItem.rightBarButtonItem = addButton
-        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
-            self.detailViewController?.managedObjectContext = self.managedObjectContext
         }
     }
 
-    func insertNewObject(sender: AnyObject) {
-        //let entityName = NSStringFromClass(HeroMusic2.classForCoder())
+    /*func insertNewObject(sender: AnyObject) {
+        let detailViewController = sender as? DetailViewController;
         
-        let entity =  NSEntityDescription.entityForName("HeroMusic2",
-            inManagedObjectContext:
-            managedObjectContext!)
-        
-        let heroMusic = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext:managedObjectContext) as HeroMusic2
-        
-        let nameStr : String = "Hero Music " + NSNumber(unsignedInt: arc4random_uniform(120)).stringValue
-        heroMusic.name = nameStr
-        println("heroMusic.name=\(heroMusic.name)")
+        println("insertNewObject - heroMusic.name=\(detailViewController?.detailItem?.name)")
         
         var savingError: NSError?
         if managedObjectContext!.save(&savingError){
@@ -63,9 +49,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
         
-        objects.append(heroMusic)
-        self.tableView.reloadData()
-     }
+        //objects.append(heroMusic)
+        //self.tableView.reloadData()
+     }*/
 
     // MARK: - Segues
 
@@ -84,9 +70,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
             controller.detailItem = object
-            controller.navigationItem.leftBarButtonItem =
-                self.splitViewController?.displayModeButtonItem()
-            controller.navigationItem.leftItemsSupplementBackButton = true
+            //controller.navigationItem.leftBarButtonItem =
+                //self.splitViewController?.displayModeButtonItem()
+            //controller.navigationItem.leftItemsSupplementBackButton = true
         } else if segue.identifier == "editDetail" {
             if let indexPath =
                 self.tableView.indexPathForSelectedRow() {
@@ -94,9 +80,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     println("editDetail - detailItem=\(object)")
                     let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
                     controller.detailItem = object
-                    controller.navigationItem.leftBarButtonItem =
-                        self.splitViewController?.displayModeButtonItem()
-                    controller.navigationItem.leftItemsSupplementBackButton = true
+                    //controller.navigationItem.leftBarButtonItem =
+                        //self.splitViewController?.displayModeButtonItem()
+                    //controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
@@ -175,6 +161,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
+    }
+    
+    @IBAction func cancelToMainViewController(segue:UIStoryboardSegue) {
+        println("cancelToMainViewController")
+    }
+    
+    @IBAction func saveDetail(segue:UIStoryboardSegue) {
+        println("saveDetail")
     }
 }
 

@@ -4,21 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Master-->
-        <scene sceneID="pY4-Hu-kfo">
-            <objects>
-                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="-630"/>
-        </scene>
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
@@ -31,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Testing..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCb-iD-PJi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCb-iD-PJi">
                                 <rect key="frame" x="16" y="107" width="207" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changedName:" destination="JEX-9P-axG" eventType="editingDidEnd" id="lPp-yg-JD4"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaO-3n-foe">
                                 <rect key="frame" x="16" y="79" width="58" height="21"/>
@@ -53,38 +41,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="k7M-VK-8BA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BC5-Mb-HW8">
-                                <rect key="frame" x="290" y="492" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="RMx-3f-FxP" kind="show" id="kl9-eR-651"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Details" id="mOI-FS-AaM">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="A5c-Ly-40u"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="WhN-Mo-ikr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t86-oF-hO3">
                                 <rect key="frame" x="-23" y="-15" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="alP-T1-0wu" kind="unwind" unwindAction="saveDetail:" id="Wck-zt-gh2"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="saveDetail:" destination="JEX-9P-axG" id="hHJ-rQ-5Ux"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="hCb-iD-PJi" id="pbG-Hr-hgj"/>
-                        <outlet property="saveDetailBtn" destination="t86-oF-hO3" id="djL-Yl-b2K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+                <exit id="alP-T1-0wu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="813" y="179"/>
+            <point key="canvasLocation" x="830" y="177"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -92,18 +70,17 @@
                 <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
-                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
-                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                        <segue destination="p37-Nz-oid" kind="relationship" relationship="masterViewController" id="CEx-fv-AjA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--Master-->
+        <!--Hero Music-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="HeroMusic2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Hero Music" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="HeroMusic2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +104,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="editDetail" id="eoY-np-GX9"/>
+                                    <segue destination="vC3-pB-5Vb" kind="show" identifier="editDetail" id="dFt-NM-PlQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -137,17 +114,18 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                    <navigationItem key="navigationItem" title="Hero Music" id="Zdf-7t-Un8">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="jQb-jT-JgI"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mpc-sT-tyP">
                             <connections>
-                                <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="addDetail" id="2va-ip-2Bm"/>
+                                <segue destination="vC3-pB-5Vb" kind="show" identifier="addDetail" id="xjb-Aj-YOs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="673" y="-776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -157,16 +135,30 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="fxl-cK-tmV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jEH-rV-4Gg">
+            <objects>
+                <navigationController id="p37-Nz-oid" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="epz-6j-hmi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="4xN-Zp-MLE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZ0-va-L2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="-751"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kl9-eR-651"/>
-        <segue reference="eoY-np-GX9"/>
+        <segue reference="dFt-NM-PlQ"/>
     </inferredMetricsTieBreakers>
 </document>

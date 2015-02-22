@@ -11,10 +11,18 @@ import CoreData
 
 class DetailViewController: UIViewController {
     
-    var managedObjectContext: NSManagedObjectContext? = nil
+    @IBAction func changedName(sender: UITextField) {
+        if let nameField = self.nameTextField {
+            detailItem?.name = nameField.text
+            println("updateDetail - nameField.text=\(nameField.text)")
+        }
+    }
+    
+    //@IBAction func saveDetail(sender: AnyObject) {
+     //   delegate?.insertNewObject(self)
+    //}
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var saveDetailBtn: UIButton!
    
     var detailItem: HeroMusic2? {
         didSet {
@@ -22,7 +30,7 @@ class DetailViewController: UIViewController {
             self.configureView()
         }
     }
-
+    
     func configureView() {
         // Update the user interface for the detail item.
         let object = self.detailItem as HeroMusic2?
@@ -34,10 +42,10 @@ class DetailViewController: UIViewController {
         }
 
         // KRL : cleanup?
-        if let button = self.saveDetailBtn {
+        //if let button = self.saveDetailBtn {
             //saveDetailBtn.addTarget(self, action: "insertNewObject:", forControlEvents: .TouchUpInside)
-            println("button.titleLabel?.text=\(button.titleLabel?.text)")
-        }
+           //println("button.titleLabel?.text=\(button.titleLabel?.text)")
+        //}
     }
 
     override func viewDidLoad() {
@@ -46,11 +54,9 @@ class DetailViewController: UIViewController {
         self.configureView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    //override func didReceiveMemoryWarning() {
+        //super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-
+    //}
 }
 
