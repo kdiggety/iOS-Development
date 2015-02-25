@@ -13,6 +13,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    var imManagedObjectContext: NSManagedObjectContext? = nil
 
     var objects = [HeroMusic2]()
 
@@ -60,10 +61,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "addDetail" {
             let entity =  NSEntityDescription.entityForName("HeroMusic2",
                 inManagedObjectContext:
-                managedObjectContext!)
-            
+                imManagedObjectContext!)
             let object = NSManagedObject(entity: entity!,
-                insertIntoManagedObjectContext:managedObjectContext) as HeroMusic2
+                insertIntoManagedObjectContext:imManagedObjectContext) as HeroMusic2
             
             object.name = "New Hero Music"
             println("addDetail - detailItem=\(object.name)")
@@ -77,7 +77,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             if let indexPath =
                 self.tableView.indexPathForSelectedRow() {
                     let object = objects[indexPath.row] as HeroMusic2
-                    println("editDetail - detailItem=\(object)")
+                    println("editDetail - detailItem=\(object.name)")
                     let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
                     controller.detailItem = object
                     //controller.navigationItem.leftBarButtonItem =
@@ -106,7 +106,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
         let object = objects[indexPath.row]
             cell.textLabel!.text = object.valueForKey("name") as String?
-        println("tableView - cell.textLabel!.text=\(cell.textLabel!.text)")
+        //println("tableView - cell.textLabel!.text=\(cell.textLabel!.text)")
             
         return cell
     }
@@ -163,12 +163,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
     
-    @IBAction func cancelToMainViewController(segue:UIStoryboardSegue) {
-        println("cancelToMainViewController")
+    @IBAction func cancelSaveDetail(segue:UIStoryboardSegue) {
+        let moc = detailViewController?.detailItem?.managedObjectContext
+        println("cancelSaveDetail - managedObjectContext=\(moc)")
+    }
+    
+    @IBAction func cancelEditDetail(segue:UIStoryboardSegue) {
+        let moc = detailViewController?.detailItem?.managedObjectContext
+        println("cancelSaveDetail - managedObjectContext=\(moc)")
     }
     
     @IBAction func saveDetail(segue:UIStoryboardSegue) {
-        println("saveDetail")
+        let moc = detailViewController?.detailItem?.managedObjectContext
+        println("saveDetail - managedObjectContext=\(moc)")
+    }
+    
+    @IBAction func editDetail(segue:UIStoryboardSegue) {
+        let moc = detailViewController?.detailItem?.managedObjectContext
+        println("editDetail - managedObjectContext=\(moc)")
     }
 }
 
