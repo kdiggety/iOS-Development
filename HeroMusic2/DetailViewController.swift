@@ -13,50 +13,39 @@ class DetailViewController: UIViewController {
     
     @IBAction func changedName(sender: UITextField) {
         if let nameField = self.nameTextField {
-            detailItem?.name = nameField.text
+            //self.detailItem?.name = nameField.text
+            self.detailItem?.setValue(nameField.text, forKey: "name")
             println("updateDetail - nameField.text=\(nameField.text)")
         }
     }
-    
-    //@IBAction func saveDetail(sender: AnyObject) {
-     //   delegate?.insertNewObject(self)
-    //}
     
     @IBOutlet weak var nameTextField: UITextField!
    
     var detailItem: HeroMusic2? {
         didSet {
             // Update the view.
-            self.configureView()
+            // TODO : KRL - Commented because it did not seem to configure the view
+            //println("detailItem - didSet")
+            //self.configureView()
         }
     }
     
     func configureView() {
         // Update the user interface for the detail item.
         let object = self.detailItem as HeroMusic2?
-        println("Has detailItem=\(object)")
+        println("Has detailItem=\(object?.name)")
         
         if let nameField = self.nameTextField {
             nameField.text = object?.name
             println("nameField.text=\(nameField.text)")
         }
-
-        // KRL : cleanup?
-        //if let button = self.saveDetailBtn {
-            //saveDetailBtn.addTarget(self, action: "insertNewObject:", forControlEvents: .TouchUpInside)
-           //println("button.titleLabel?.text=\(button.titleLabel?.text)")
-        //}
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println("DetailViewController.viewDidLoad")
         self.configureView()
     }
-
-    //override func didReceiveMemoryWarning() {
-        //super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    //}
 }
 
