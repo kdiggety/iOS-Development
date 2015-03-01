@@ -24,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as UINavigationController
         let controller = masterNavigationController.topViewController as MasterViewController
         controller.managedObjectContext = self.managedObjectContext
-        // TODO : KRL - Uncomment
-        //controller.imManagedObjectContext = self.imManagedObjectContext
         
         let fileManager = NSFileManager.defaultManager()
         
@@ -62,7 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        println("applicationWillTerminate")
         self.saveContext()
     }
 
@@ -116,29 +113,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         return coordinator
     }()
-
-    /*lazy var imPersistentStoreCoordinator: NSPersistentStoreCoordinator? = {
-        // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
-        // Create the coordinator and store
-        var imCoordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        var error: NSError? = nil
-        var failureReason = "There was an error creating or loading the application's saved data."
-        if imCoordinator!.addPersistentStoreWithType(NSInMemoryStoreType, configuration: nil, URL: nil, options: nil, error: &error) == nil {
-            imCoordinator = nil
-            // Report any error we got.
-            let dict = NSMutableDictionary()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
-            dict[NSUnderlyingErrorKey] = error
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            // Replace this with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(error), \(error!.userInfo)")
-            abort()
-        }
-        
-        return imCoordinator
-        }()*/
     
     lazy var managedObjectContext: NSManagedObjectContext? = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
@@ -150,17 +124,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
-
-    /*lazy var imManagedObjectContext: NSManagedObjectContext? = {
-        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-        let imCoordinator = self.imPersistentStoreCoordinator
-        if imCoordinator == nil {
-            return nil
-        }
-        var imManagedObjectContext = NSManagedObjectContext()
-        imManagedObjectContext.persistentStoreCoordinator = imCoordinator
-        return imManagedObjectContext
-        }()*/
     
     // MARK: - Core Data Saving support
 

@@ -12,11 +12,10 @@ import CoreData
 class DetailViewController: UIViewController {
     
     @IBAction func changedName(sender: UITextField) {
-        if let nameField = self.nameTextField {
-            //self.detailItem?.name = nameField.text
-            self.detailItem?.setValue(nameField.text, forKey: "name")
+       /* if let nameField = self.nameTextField {
+            detailItem?.name = nameField.text
             println("updateDetail - nameField.text=\(nameField.text)")
-        }
+        }*/
     }
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -24,28 +23,28 @@ class DetailViewController: UIViewController {
     var detailItem: HeroMusic2? {
         didSet {
             // Update the view.
-            // TODO : KRL - Commented because it did not seem to configure the view
-            //println("detailItem - didSet")
-            //self.configureView()
+            println("detailItem - didSet")
+            self.configureView()
         }
     }
     
     func configureView() {
+        println("DetailViewController.configureView")
         // Update the user interface for the detail item.
-        let object = self.detailItem as HeroMusic2?
-        println("Has detailItem=\(object?.name)")
-        
-        if let nameField = self.nameTextField {
-            nameField.text = object?.name
-            println("nameField.text=\(nameField.text)")
+        if let object = self.detailItem as HeroMusic2? {
+            println("Has detailItem=\(object.name)")
+            
+            if let nameField = self.nameTextField {
+                nameField.text = object.name
+                println("nameField.text=\(nameField.text)")
+            }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         println("DetailViewController.viewDidLoad")
+        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
 }
-
