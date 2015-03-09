@@ -7,16 +7,8 @@
 //
 
 import UIKit
-import CoreData
 
 class DetailViewController: UIViewController {
-    
-    @IBAction func changedName(sender: UITextField) {
-       /* if let nameField = self.nameTextField {
-            detailItem?.name = nameField.text
-            println("updateDetail - nameField.text=\(nameField.text)")
-        }*/
-    }
     
     @IBOutlet weak var nameTextField: UITextField!
    

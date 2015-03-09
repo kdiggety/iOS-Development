@@ -42,7 +42,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "editDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                     let object = objects[indexPath.row] as HeroMusic2
-                    let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                    let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailTableViewController
                     controller.detailItem = object
             }
         }

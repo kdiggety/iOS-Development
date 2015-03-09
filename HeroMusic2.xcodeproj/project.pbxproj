@@ -15,6 +15,8 @@
 		931C2CB81A92D0D4006BF682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931C2CB71A92D0D4006BF682 /* Images.xcassets */; };
 		931C2CBB1A92D0D4006BF682 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931C2CB91A92D0D4006BF682 /* LaunchScreen.xib */; };
 		931C2CC71A92D0D5006BF682 /* HeroMusic2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C2CC61A92D0D5006BF682 /* HeroMusic2Tests.swift */; };
+		93313C361AABEA520053FE78 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93313C351AABEA520053FE78 /* DetailTableViewController.swift */; };
+		93B554461AA432FD003D5D4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B554451AA432FD003D5D4E /* MapKit.framework */; };
 		93B585D71A98607B00934DC4 /* HeroMusic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B585D61A98607B00934DC4 /* HeroMusic2.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		931C2CC01A92D0D5006BF682 /* HeroMusic2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroMusic2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		931C2CC51A92D0D5006BF682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		931C2CC61A92D0D5006BF682 /* HeroMusic2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroMusic2Tests.swift; sourceTree = "<group>"; };
+		93313C351AABEA520053FE78 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		93B554451AA432FD003D5D4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		93B585D61A98607B00934DC4 /* HeroMusic2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroMusic2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B554461AA432FD003D5D4E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 		931C2C9D1A92D0D4006BF682 = {
 			isa = PBXGroup;
 			children = (
+				93B554451AA432FD003D5D4E /* MapKit.framework */,
 				931C2CA81A92D0D4006BF682 /* HeroMusic2 */,
 				931C2CC31A92D0D5006BF682 /* HeroMusic2Tests */,
 				931C2CA71A92D0D4006BF682 /* Products */,
@@ -87,6 +93,7 @@
 				931C2CAB1A92D0D4006BF682 /* AppDelegate.swift */,
 				931C2CB01A92D0D4006BF682 /* MasterViewController.swift */,
 				931C2CB21A92D0D4006BF682 /* DetailViewController.swift */,
+				93313C351AABEA520053FE78 /* DetailTableViewController.swift */,
 				931C2CB41A92D0D4006BF682 /* Main.storyboard */,
 				931C2CB71A92D0D4006BF682 /* Images.xcassets */,
 				931C2CB91A92D0D4006BF682 /* LaunchScreen.xib */,
@@ -221,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93313C361AABEA520053FE78 /* DetailTableViewController.swift in Sources */,
 				931C2CAF1A92D0D4006BF682 /* HeroMusic2.xcdatamodeld in Sources */,
 				93B585D71A98607B00934DC4 /* HeroMusic2.swift in Sources */,
 				931C2CAC1A92D0D4006BF682 /* AppDelegate.swift in Sources */,
