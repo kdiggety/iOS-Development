@@ -124,7 +124,6 @@ class DetailTableViewController: UITableViewController {
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
-        cell.sizeThatFits(mapView.)
         return cell;
     }
 }
