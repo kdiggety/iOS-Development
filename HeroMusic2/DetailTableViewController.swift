@@ -156,13 +156,13 @@ class DetailTableViewController: UITableViewController, UITableViewDelegate {
     return [self calculateHeightForConfiguredSizingCell:sizingCell];
     }*/
  
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    /*override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row isLandscapeOrientation() {
             return 120.0
         } else {
             return 155.0
         }
-    }
+    }*/
     
     func isLandscapeOrientation() -> Bool {
         return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
