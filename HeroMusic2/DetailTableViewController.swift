@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class DetailTableViewController: UITableViewController {
+class DetailTableViewController: UITableViewController, UITableViewDelegate {
     
     let kNameCellID: NSString = "nameCell";
     let kTimeCellID: NSString = "timeCell";
@@ -49,6 +49,11 @@ class DetailTableViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         self.createDateFormatter()
+        self.configureTableView()
+    }
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func datePickerIsShown() -> Bool {
@@ -125,5 +130,45 @@ class DetailTableViewController: UITableViewController {
         mapView.setRegion(region, animated: true)
         
         return cell;
+    }
+    
+    /*override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 150
+    }*/
+    
+    /*override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (self.hasImageAtIndexPath()) {
+            return self.heightForImageCellAtIndexPath
+        } else {
+            return self.heightForBasicCellAtIndexPath
+        }
+    }*/
+    
+    /*
+    func heightForImageCellAtIndexPat:(indexPath: NSIndexPath) -> CGFloat {
+    static RWImageCell *sizingCell = nil
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+    sizingCell = [self.tableView dequeueReusableCellWithIdentifier:RWImageCellIdentifier];
+    });
+    
+    [self configureImageCell:sizingCell atIndexPath:indexPath];
+    return [self calculateHeightForConfiguredSizingCell:sizingCell];
+    }*/
+ 
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row isLandscapeOrientation() {
+            return 120.0
+        } else {
+            return 155.0
+        }
+    }
+    
+    func isLandscapeOrientation() -> Bool {
+        return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("SELECTED INDEX \(indexPath.row)")
     }
 }

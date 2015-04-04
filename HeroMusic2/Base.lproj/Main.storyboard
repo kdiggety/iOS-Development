@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Add Details-->
@@ -333,15 +334,25 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="mapCell" id="Hwu-x3-N7K">
+                            <tableViewCell contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" selectionStyle="blue" indentationWidth="10" reuseIdentifier="mapCell" id="Hwu-x3-N7K">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hwu-x3-N7K" id="hKl-iC-goM">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" tableViewCell="Hwu-x3-N7K" id="hKl-iC-goM">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ywo-Wi-Yop">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ywo-Wi-Yop">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         </mapView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ywo-Wi-Yop" firstAttribute="leading" secondItem="hKl-iC-goM" secondAttribute="leadingMargin" constant="-10" id="CZf-8F-hBV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ywo-Wi-Yop" secondAttribute="bottom" constant="-10" id="Mob-GF-j5c"/>
+                                        <constraint firstItem="Ywo-Wi-Yop" firstAttribute="top" secondItem="hKl-iC-goM" secondAttribute="top" constant="10" id="Pws-f1-G6a"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ywo-Wi-Yop" secondAttribute="trailing" constant="10" id="U11-Fg-3hB"/>
+                                        <constraint firstItem="Ywo-Wi-Yop" firstAttribute="top" secondItem="hKl-iC-goM" secondAttribute="topMargin" constant="-10" id="ZgQ-CP-sPK"/>
+                                        <constraint firstItem="Ywo-Wi-Yop" firstAttribute="leading" secondItem="hKl-iC-goM" secondAttribute="leading" constant="10" id="h7H-ls-3Ze"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ywo-Wi-Yop" secondAttribute="bottom" constant="10" id="orw-x1-xKy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ywo-Wi-Yop" secondAttribute="trailing" constant="-10" id="tlY-eA-l6W"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
