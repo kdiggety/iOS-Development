@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93D2F6371B001B8F004423B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2F6361B001B8F004423B0 /* AppDelegate.swift */; };
+		93D2F6391B001B8F004423B0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F6381B001B8F004423B0 /* GameScene.sks */; };
+		93D2F63B1B001B90004423B0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2F63A1B001B90004423B0 /* GameScene.swift */; };
+		93D2F63D1B001B90004423B0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2F63C1B001B90004423B0 /* GameViewController.swift */; };
+		93D2F6401B001B90004423B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F63E1B001B90004423B0 /* Main.storyboard */; };
+		93D2F6421B001B90004423B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F6411B001B90004423B0 /* Images.xcassets */; };
+		93D2F6451B001B90004423B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F6431B001B90004423B0 /* LaunchScreen.xib */; };
+		93D2F6511B001B90004423B0 /* FightKnightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2F6501B001B90004423B0 /* FightKnightsTests.swift */; };
+		93D2F6611B017548004423B0 /* aSBgImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F65F1B017548004423B0 /* aSBgImg.png */; };
+		93D2F6621B017548004423B0 /* aSThumbImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F6601B017548004423B0 /* aSThumbImg.png */; };
+		93D2F6681B01BCEB004423B0 /* aButtonImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D2F6671B01BCEB004423B0 /* aButtonImg.png */; };
+		93D2F66A1B0304AB004423B0 /* GameControl2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2F6691B0304AB004423B0 /* GameControl2.swift */; };
+		93F03AC31B0637C200BC19B8 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F03AC21B0637C200BC19B8 /* apple.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93D2F64B1B001B90004423B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93D2F6291B001B8F004423B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93D2F6301B001B8F004423B0;
+			remoteInfo = FightKnights;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93D2F6311B001B8F004423B0 /* FightKnights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightKnights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D2F6351B001B8F004423B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D2F6361B001B8F004423B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93D2F6381B001B8F004423B0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		93D2F63A1B001B90004423B0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		93D2F63C1B001B90004423B0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		93D2F63F1B001B90004423B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93D2F6411B001B90004423B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		93D2F6441B001B90004423B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		93D2F64A1B001B90004423B0 /* FightKnightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightKnightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D2F64F1B001B90004423B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D2F6501B001B90004423B0 /* FightKnightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightKnightsTests.swift; sourceTree = "<group>"; };
+		93D2F65F1B017548004423B0 /* aSBgImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aSBgImg.png; sourceTree = "<group>"; };
+		93D2F6601B017548004423B0 /* aSThumbImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aSThumbImg.png; sourceTree = "<group>"; };
+		93D2F6671B01BCEB004423B0 /* aButtonImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aButtonImg.png; sourceTree = "<group>"; };
+		93D2F6691B0304AB004423B0 /* GameControl2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControl2.swift; sourceTree = "<group>"; };
+		93F03AC21B0637C200BC19B8 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93D2F62E1B001B8F004423B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D2F6471B001B90004423B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93D2F6281B001B8F004423B0 = {
+			isa = PBXGroup;
+			children = (
+				93D2F6331B001B8F004423B0 /* FightKnights */,
+				93D2F64D1B001B90004423B0 /* FightKnightsTests */,
+				93D2F6321B001B8F004423B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93D2F6321B001B8F004423B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F6311B001B8F004423B0 /* FightKnights.app */,
+				93D2F64A1B001B90004423B0 /* FightKnightsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93D2F6331B001B8F004423B0 /* FightKnights */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F65C1B0172B6004423B0 /* nodes */,
+				93D2F6361B001B8F004423B0 /* AppDelegate.swift */,
+				93D2F65A1B001BAF004423B0 /* scenes */,
+				93D2F65B1B001BBB004423B0 /* controllers */,
+				93D2F63E1B001B90004423B0 /* Main.storyboard */,
+				93D2F6411B001B90004423B0 /* Images.xcassets */,
+				93D2F6431B001B90004423B0 /* LaunchScreen.xib */,
+				93D2F6341B001B8F004423B0 /* Supporting Files */,
+			);
+			path = FightKnights;
+			sourceTree = "<group>";
+		};
+		93D2F6341B001B8F004423B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F6351B001B8F004423B0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93D2F64D1B001B90004423B0 /* FightKnightsTests */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F6501B001B90004423B0 /* FightKnightsTests.swift */,
+				93D2F64E1B001B90004423B0 /* Supporting Files */,
+			);
+			path = FightKnightsTests;
+			sourceTree = "<group>";
+		};
+		93D2F64E1B001B90004423B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F64F1B001B90004423B0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93D2F65A1B001BAF004423B0 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F6381B001B8F004423B0 /* GameScene.sks */,
+				93D2F63A1B001B90004423B0 /* GameScene.swift */,
+			);
+			name = scenes;
+			sourceTree = "<group>";
+		};
+		93D2F65B1B001BBB004423B0 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F63C1B001B90004423B0 /* GameViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		93D2F65C1B0172B6004423B0 /* nodes */ = {
+			isa = PBXGroup;
+			children = (
+				93D2F65F1B017548004423B0 /* aSBgImg.png */,
+				93D2F6671B01BCEB004423B0 /* aButtonImg.png */,
+				93F03AC21B0637C200BC19B8 /* apple.png */,
+				93D2F6601B017548004423B0 /* aSThumbImg.png */,
+				93D2F6691B0304AB004423B0 /* GameControl2.swift */,
+			);
+			name = nodes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93D2F6301B001B8F004423B0 /* FightKnights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93D2F6541B001B90004423B0 /* Build configuration list for PBXNativeTarget "FightKnights" */;
+			buildPhases = (
+				93D2F62D1B001B8F004423B0 /* Sources */,
+				93D2F62E1B001B8F004423B0 /* Frameworks */,
+				93D2F62F1B001B8F004423B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FightKnights;
+			productName = FightKnights;
+			productReference = 93D2F6311B001B8F004423B0 /* FightKnights.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93D2F6491B001B90004423B0 /* FightKnightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93D2F6571B001B90004423B0 /* Build configuration list for PBXNativeTarget "FightKnightsTests" */;
+			buildPhases = (
+				93D2F6461B001B90004423B0 /* Sources */,
+				93D2F6471B001B90004423B0 /* Frameworks */,
+				93D2F6481B001B90004423B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93D2F64C1B001B90004423B0 /* PBXTargetDependency */,
+			);
+			name = FightKnightsTests;
+			productName = FightKnightsTests;
+			productReference = 93D2F64A1B001B90004423B0 /* FightKnightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93D2F6291B001B8F004423B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lewis, Kenneth";
+				TargetAttributes = {
+					93D2F6301B001B8F004423B0 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					93D2F6491B001B90004423B0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 93D2F6301B001B8F004423B0;
+					};
+				};
+			};
+			buildConfigurationList = 93D2F62C1B001B8F004423B0 /* Build configuration list for PBXProject "FightKnights" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93D2F6281B001B8F004423B0;
+			productRefGroup = 93D2F6321B001B8F004423B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93D2F6301B001B8F004423B0 /* FightKnights */,
+				93D2F6491B001B90004423B0 /* FightKnightsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93D2F62F1B001B8F004423B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D2F6451B001B90004423B0 /* LaunchScreen.xib in Resources */,
+				93D2F6421B001B90004423B0 /* Images.xcassets in Resources */,
+				93D2F6621B017548004423B0 /* aSThumbImg.png in Resources */,
+				93D2F6681B01BCEB004423B0 /* aButtonImg.png in Resources */,
+				93D2F6611B017548004423B0 /* aSBgImg.png in Resources */,
+				93D2F6391B001B8F004423B0 /* GameScene.sks in Resources */,
+				93F03AC31B0637C200BC19B8 /* apple.png in Resources */,
+				93D2F6401B001B90004423B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D2F6481B001B90004423B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93D2F62D1B001B8F004423B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D2F63B1B001B90004423B0 /* GameScene.swift in Sources */,
+				93D2F63D1B001B90004423B0 /* GameViewController.swift in Sources */,
+				93D2F66A1B0304AB004423B0 /* GameControl2.swift in Sources */,
+				93D2F6371B001B8F004423B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D2F6461B001B90004423B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D2F6511B001B90004423B0 /* FightKnightsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93D2F64C1B001B90004423B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93D2F6301B001B8F004423B0 /* FightKnights */;
+			targetProxy = 93D2F64B1B001B90004423B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93D2F63E1B001B90004423B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93D2F63F1B001B90004423B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93D2F6431B001B90004423B0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93D2F6441B001B90004423B0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93D2F6521B001B90004423B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93D2F6531B001B90004423B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93D2F6551B001B90004423B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FightKnights/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93D2F6561B001B90004423B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FightKnights/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		93D2F6581B001B90004423B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FightKnightsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FightKnights.app/FightKnights";
+			};
+			name = Debug;
+		};
+		93D2F6591B001B90004423B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FightKnightsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FightKnights.app/FightKnights";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93D2F62C1B001B8F004423B0 /* Build configuration list for PBXProject "FightKnights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93D2F6521B001B90004423B0 /* Debug */,
+				93D2F6531B001B90004423B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93D2F6541B001B90004423B0 /* Build configuration list for PBXNativeTarget "FightKnights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93D2F6551B001B90004423B0 /* Debug */,
+				93D2F6561B001B90004423B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93D2F6571B001B90004423B0 /* Build configuration list for PBXNativeTarget "FightKnightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93D2F6581B001B90004423B0 /* Debug */,
+				93D2F6591B001B90004423B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93D2F6291B001B8F004423B0 /* Project object */;
+}
