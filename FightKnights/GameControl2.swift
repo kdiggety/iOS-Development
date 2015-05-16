@@ -18,6 +18,7 @@ import SpriteKit
 
 @objc protocol GameControl2Protocol {
     func gameControlMoved(gameControl: GameControl2, velocity: CGPoint, angularVelocity: Float)
+    func gameControlClicked(gameControl: GameControl2)
 }
 
 enum ControlStyle {
@@ -54,7 +55,7 @@ class GameControl2: SKNode {
     var buttonPadding: CGFloat
     
     var velocityLoop: CADisplayLink?
-    var isTracking = false
+    var isTracking = false, isClicking = false
     var velocity = CGPointZero, anchorPointInPoints = CGPointZero
     var angularVelocity = Float()
     
@@ -102,6 +103,8 @@ class GameControl2: SKNode {
     func update() {
         if isTracking {
             delagate?.gameControlMoved(self, velocity: self.velocity, angularVelocity: self.angularVelocity)
+        } else if isClicking {
+            delagate?.gameControlClicked(self)
         }
     }
     
@@ -146,6 +149,7 @@ class GameControl2: SKNode {
     
     func reset() {
         self.isTracking = false
+        self.isClicking = false
         self.velocity = CGPointZero
         let easeOut: SKAction = SKAction.moveTo(self.anchorPointInPoints, duration: kThumbSpringBackDuration)
         easeOut.timingMode = SKActionTimingMode.EaseOut
@@ -158,8 +162,10 @@ class GameControl2: SKNode {
         for touch: AnyObject in touches {
             let location: CGPoint = touch.locationInNode(self)
             let touchedNode = nodeAtPoint(location)
-            if self.buttonNode == touchedNode && isTracking == false {
+            if self.buttonNode == touchedNode && self.buttonType == .Draggable && isTracking == false {
                 isTracking = true
+            } else if self.buttonNode == touchedNode && (self.buttonType == .Clickable || self.buttonType == .Default) && isClicking == false {
+                isClicking = true
             }
         }
     }
@@ -191,7 +197,21 @@ class GameControl2: SKNode {
                     self.angularVelocity = -atan2f(Float(tNAnchPoinXDiff), Float(tNAnchPoinYDiff))
                 }
             }
-        }
+        }/* else if buttonType == .Clickable {
+            var initialPoint: CGPoint = self.position;
+            var amplitudeX: NSInteger = 32;
+            var amplitudeY: NSInteger = 2;
+            var randomActions = [NSMutableArray]();
+            for (int i = 0; i < times; i++) {
+                var randX: NSInteger = self.position.x+arc4random() % amplitudeX - amplitudeX/2;
+                var randY: NSInteger = self.position.y+arc4random() % amplitudeY - amplitudeY/2;
+                var action = [SKAction moveTo:CGPointMake(randX, randY) duration:0.01];
+                randomActions.addObject(action)
+            }
+            
+            let actionSeq = SKAction(s
+            butto
+        }*/
     }
     
     // touch end

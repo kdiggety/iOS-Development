@@ -189,8 +189,38 @@ class GameScene: SKScene, GameControl2Protocol {
         if let aN = appleNode {
             if gameControl.isEqual(directionControl) {
                 aN.position = CGPointMake(aN.position.x + (velocity.x * 0.12), aN.position.y + (velocity.y * 0.12))
+                println("GameScene.gameControlMoved - moving...")
             } else if gameControl.isEqual(actionControl) {
                 aN.zRotation = CGFloat(angularVelocity)
+                println("GameScene.gameControlMoved - spinning...")
+            }
+        }
+    }
+    
+    func gameControlClicked(gameControl: GameControl2) {
+        println("GameScene.gameControlClicked")
+        
+        if let aN = appleNode {
+            if gameControl.isEqual(actionControl) {
+                println("GameScene.gameControlMoved - clicked...")
+                
+                var initialPoint: CGPoint = aN.position;
+                var amplitudeX: NSInteger = 32;
+                var amplitudeY: NSInteger = 2;
+                
+                let randomActions = NSMutableArray();
+                
+                for index in 1...10 {
+                    var randX: CGFloat = aN.position.x + CGFloat(UInt(arc4random())) % CGFloat(amplitudeX - amplitudeX/2)
+                    var randY: CGFloat = aN.position.y + CGFloat(UInt(arc4random())) % CGFloat(amplitudeY - amplitudeY/2)
+                    var action = SKAction.moveTo(CGPointMake(randX, randY), duration:0.01);
+                    
+                    randomActions.addObject(action)
+                }
+                
+                let wiggleAction = SKAction.sequence(randomActions)
+                
+                aN.runAction(wiggleAction)
             }
         }
     }
