@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937025A71B27F80800429BFE /* CellPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937025A51B27F80800429BFE /* CellPadView.swift */; };
+		937025A81B27F80800429BFE /* CellPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937025A61B27F80800429BFE /* CellPadView.xib */; };
+		93C1ABB51B253C0B0068F079 /* CenterPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1ABB31B253C0B0068F079 /* CenterPanelViewController.swift */; };
 		93C7673E1B2018C600033DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7673D1B2018C600033DC4 /* AppDelegate.swift */; };
 		93C767401B2018C600033DC4 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7673F1B2018C600033DC4 /* ContainerViewController.swift */; };
 		93C767431B2018C600033DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C767411B2018C600033DC4 /* Main.storyboard */; };
@@ -14,7 +17,7 @@
 		93C767481B2018C600033DC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C767461B2018C600033DC4 /* LaunchScreen.xib */; };
 		93C767541B2018C600033DC4 /* the_MCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C767531B2018C600033DC4 /* the_MCTests.swift */; };
 		93C7675E1B2026D800033DC4 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7675D1B2026D800033DC4 /* SidePanelViewController.swift */; };
-		93C767601B20286900033DC4 /* CenterPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7675F1B20286900033DC4 /* CenterPanelViewController.swift */; };
+		93C767601B20286900033DC4 /* OldCenterPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7675F1B20286900033DC4 /* OldCenterPanelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		937025A51B27F80800429BFE /* CellPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPadView.swift; sourceTree = "<group>"; };
+		937025A61B27F80800429BFE /* CellPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellPadView.xib; sourceTree = "<group>"; };
+		93C1ABB31B253C0B0068F079 /* CenterPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterPanelViewController.swift; sourceTree = "<group>"; };
 		93C767381B2018C600033DC4 /* the MC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the MC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7673C1B2018C600033DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C7673D1B2018C600033DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +45,7 @@
 		93C767521B2018C600033DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C767531B2018C600033DC4 /* the_MCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_MCTests.swift; sourceTree = "<group>"; };
 		93C7675D1B2026D800033DC4 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		93C7675F1B20286900033DC4 /* CenterPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterPanelViewController.swift; sourceTree = "<group>"; };
+		93C7675F1B20286900033DC4 /* OldCenterPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldCenterPanelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +90,14 @@
 				93C7673D1B2018C600033DC4 /* AppDelegate.swift */,
 				93C7673F1B2018C600033DC4 /* ContainerViewController.swift */,
 				93C7675D1B2026D800033DC4 /* SidePanelViewController.swift */,
-				93C7675F1B20286900033DC4 /* CenterPanelViewController.swift */,
+				93C7675F1B20286900033DC4 /* OldCenterPanelViewController.swift */,
+				93C1ABB31B253C0B0068F079 /* CenterPanelViewController.swift */,
 				93C767411B2018C600033DC4 /* Main.storyboard */,
 				93C767441B2018C600033DC4 /* Images.xcassets */,
 				93C767461B2018C600033DC4 /* LaunchScreen.xib */,
 				93C7673B1B2018C600033DC4 /* Supporting Files */,
+				937025A51B27F80800429BFE /* CellPadView.swift */,
+				937025A61B27F80800429BFE /* CellPadView.xib */,
 			);
 			path = "the MC";
 			sourceTree = "<group>";
@@ -198,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937025A81B27F80800429BFE /* CellPadView.xib in Resources */,
 				93C767431B2018C600033DC4 /* Main.storyboard in Resources */,
 				93C767481B2018C600033DC4 /* LaunchScreen.xib in Resources */,
 				93C767451B2018C600033DC4 /* Images.xcassets in Resources */,
@@ -220,7 +230,9 @@
 			files = (
 				93C7675E1B2026D800033DC4 /* SidePanelViewController.swift in Sources */,
 				93C767401B2018C600033DC4 /* ContainerViewController.swift in Sources */,
-				93C767601B20286900033DC4 /* CenterPanelViewController.swift in Sources */,
+				93C1ABB51B253C0B0068F079 /* CenterPanelViewController.swift in Sources */,
+				93C767601B20286900033DC4 /* OldCenterPanelViewController.swift in Sources */,
+				937025A71B27F80800429BFE /* CellPadView.swift in Sources */,
 				93C7673E1B2018C600033DC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +431,7 @@
 				93C767591B2018C600033DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C7675A1B2018C600033DC4 /* Build configuration list for PBXNativeTarget "the MCTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +440,7 @@
 				93C7675C1B2018C600033DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

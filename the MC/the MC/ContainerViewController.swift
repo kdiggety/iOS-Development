@@ -206,6 +206,7 @@ private extension UIStoryboard {
     
     class func centerViewController() -> CenterPanelViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterPanelViewController
+        //return CenterPanelViewController(nibName: "CenterPanelViewController", bundle: nil)
     }
     
 }
