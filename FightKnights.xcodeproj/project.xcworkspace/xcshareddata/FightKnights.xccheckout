@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D0B8E472-E09F-44B4-A61A-DE9DF96B58EA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>FightKnights</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DAD2AA06CA8C09B2C82E8842C2315E767A8B1716</key>
 		<string>https://github.com/kdiggety/iOS-Development.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FightKnights.xcodeproj</string>
+	<string>FightKnights.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DAD2AA06CA8C09B2C82E8842C2315E767A8B1716</key>

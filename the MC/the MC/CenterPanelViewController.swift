@@ -21,6 +21,7 @@ class CenterPanelViewController: UICollectionViewController {
     
     var cellPad: [UIColor]?
     var delegate: CenterViewControllerDelegate?
+    var lastIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class CenterPanelViewController: UICollectionViewController {
         longPressGesture.minimumPressDuration = 0.05
         longPressGesture.numberOfTapsRequired = 0 // number of taps required
         longPressGesture.numberOfTouchesRequired = 1 // number of finger touches required
+        longPressGesture.allowableMovement = 100
         self.collectionView?.addGestureRecognizer(longPressGesture)
     }
 
@@ -72,7 +74,7 @@ class CenterPanelViewController: UICollectionViewController {
                 println("Cell view was tapped.")
                 var cell: CellPadView? = self.collectionView?.cellForItemAtIndexPath(indexPath!) as? CellPadView
                 
-                UIView.animateWithDuration(0.5, animations: {
+                UIView.animateWithDuration(0.25, animations: {
                     cell?.backgroundColor = UIColor.magentaColor()
                     cell?.backgroundColor = self.cellPad?[indexPath!.item]
                 })
@@ -82,35 +84,51 @@ class CenterPanelViewController: UICollectionViewController {
         }
     }
     
-    func handleLongPressGesture(sender: UITapGestureRecognizer) {
-        println("handleLongPressGesture - sender.state=\(sender.state.rawValue)")
+    func handleLongPressGesture(sender: UILongPressGestureRecognizer) {
+        var location: CGPoint = sender.locationInView(self.collectionView)
+        var indexPath: NSIndexPath? = self.collectionView?.indexPathForItemAtPoint(location)
+        println("handleLongPressGesture - sender.state=\(sender.state.rawValue), location=\(location), indexPath=\(indexPath), lastIndexPath=\(lastIndexPath)")
+	
         if (sender.state == .Began) {
-            var location: CGPoint = sender.locationInView(self.collectionView)
-            var indexPath: NSIndexPath? = self.collectionView?.indexPathForItemAtPoint(location)
-            
             if (indexPath != nil) {
                 println("Cell view was pressed.")
                 var cell: CellPadView? = self.collectionView?.cellForItemAtIndexPath(indexPath!) as? CellPadView
                 cell?.backgroundColor = UIColor.magentaColor()
+                lastIndexPath = indexPath
             }
-        } else if (sender.state == .Ended) {
-            var location: CGPoint = sender.locationInView(self.collectionView)
-            var indexPath: NSIndexPath? = self.collectionView?.indexPathForItemAtPoint(location)
-            
+        } else if (sender.state == .Changed) {
             if (indexPath != nil) {
-                println("Cell view was pressed.")
+                println("Cell view pressing...")
                 var cell: CellPadView? = self.collectionView?.cellForItemAtIndexPath(indexPath!) as? CellPadView
-                cell?.backgroundColor = self.cellPad?[indexPath!.item]
+                
+                if (lastIndexPath != indexPath) {
+                    println("handleLongPressGesture - DraggedRestore color for lastIndexPath=\(lastIndexPath)")
+                    var lastCell: CellPadView? = self.collectionView?.cellForItemAtIndexPath(lastIndexPath!) as? CellPadView
+                    lastCell?.backgroundColor = self.cellPad?[lastIndexPath!.item]
+                    
+                    cell?.backgroundColor = UIColor.magentaColor()
+                }
+                
+                lastIndexPath = indexPath
+            }
+        } else {
+            println("Cell view press ended.")
+            if (lastIndexPath != nil) {
+                println("handleLongPressGesture - Restore color for lastIndexPath=\(lastIndexPath)")
+                var cell: CellPadView? = self.collectionView?.cellForItemAtIndexPath(lastIndexPath!) as? CellPadView
+                cell?.backgroundColor = self.cellPad?[lastIndexPath!.item]
             }
         }
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println("Cell view selected - didSelectItemAtIndexPath=\(indexPath)")
         var cell : UICollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath)!
         cell.backgroundColor = UIColor.magentaColor()
     }
     
     override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        println("Cell view selected - didDeselectItemAtIndexPath=\(indexPath)")
         var cell : UICollectionViewCell = collectionView.cellForItemAtIndexPath(indexPath)!
         cell.backgroundColor = cellPad?[indexPath.item]
     }
