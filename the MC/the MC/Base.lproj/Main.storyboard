@@ -57,12 +57,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qBn-qR-RkD" kind="relationship" relationship="rootViewController" id="oAC-42-KIi"/>
+                        <segue destination="ryY-cf-vPO" kind="relationship" relationship="rootViewController" id="XsJ-22-PoS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NI5-wP-HtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="1127"/>
+            <point key="canvasLocation" x="343" y="1099"/>
         </scene>
         <!--Right View Controller-->
         <scene sceneID="WNf-YI-iwq">
@@ -94,7 +94,7 @@
         <scene sceneID="s0Y-hm-9F5">
             <objects>
                 <collectionViewController storyboardIdentifier="CenterViewController" id="qBn-qR-RkD" customClass="CenterPanelViewController" customModule="the_MC" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="V7p-u0-DTB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" id="V7p-u0-DTB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="Y7p-Rp-OyM">
@@ -134,7 +134,26 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk4-4i-ASx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176" y="1112"/>
+            <point key="canvasLocation" x="479" y="1874"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="AIK-Fg-Ayq">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="ryY-cf-vPO" userLabel="Main View Controller" customClass="MainViewController" customModule="the_MC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NMQ-pi-EYW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hgl-d1-NbG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vMg-gy-ZwI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ix3-gn-iK6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="es6-F8-3e2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="1117"/>
         </scene>
     </scenes>
 </document>

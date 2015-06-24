@@ -49,6 +49,7 @@ class CenterPanelViewController: UICollectionViewController {
         
         cellPad = tempArray as [UIColor]?
         
+        /*
         var singleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleSingleTapGesture:"))
         singleTapGesture.delaysTouchesBegan = true
         singleTapGesture.numberOfTapsRequired = 1 // number of taps required
@@ -62,8 +63,9 @@ class CenterPanelViewController: UICollectionViewController {
         longPressGesture.numberOfTouchesRequired = 1 // number of finger touches required
         longPressGesture.allowableMovement = 100
         self.collectionView?.addGestureRecognizer(longPressGesture)
+        */	
     }
-
+    
     func handleSingleTapGesture(sender: UITapGestureRecognizer) {
         println("handleSingleTapGesture - sender.state=\(sender.state.rawValue)")
         if (sender.state == .Ended) {

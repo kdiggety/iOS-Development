@@ -19,6 +19,7 @@ class ContainerViewController: UIViewController {
     
     var centerNavigationController: UINavigationController!
     var centerViewController: CenterPanelViewController!
+    var mainViewController: MainViewController!
     
     var currentState: SlideOutState = .BothCollapsed {
         didSet {
@@ -35,12 +36,12 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        centerViewController = UIStoryboard.centerViewController()
-        centerViewController.delegate = self
+        mainViewController = UIStoryboard.mainViewController()
+        //centerViewController.delegate = self
         
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
-        centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        centerNavigationController = UINavigationController(rootViewController: mainViewController)
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         
@@ -96,7 +97,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
     }
     
     func addChildSidePanelController(sidePanelController: SidePanelViewController) {
-        sidePanelController.delegate = centerViewController
+        //sidePanelController.delegate = centerViewController
         
         view.insertSubview(sidePanelController.view, atIndex: 0)
         
@@ -206,7 +207,9 @@ private extension UIStoryboard {
     
     class func centerViewController() -> CenterPanelViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterPanelViewController
-        //return CenterPanelViewController(nibName: "CenterPanelViewController", bundle: nil)
     }
     
+    class func mainViewController() -> MainViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController
+    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932A66521B2D21EE00DAF180 /* KeyboardNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A66511B2D21EE00DAF180 /* KeyboardNote.swift */; };
+		932A66541B2D39AA00DAF180 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A66531B2D39AA00DAF180 /* MainViewController.swift */; };
 		937025A71B27F80800429BFE /* CellPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937025A51B27F80800429BFE /* CellPadView.swift */; };
 		937025A81B27F80800429BFE /* CellPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937025A61B27F80800429BFE /* CellPadView.xib */; };
 		93C1ABB51B253C0B0068F079 /* CenterPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1ABB31B253C0B0068F079 /* CenterPanelViewController.swift */; };
@@ -18,6 +20,7 @@
 		93C767541B2018C600033DC4 /* the_MCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C767531B2018C600033DC4 /* the_MCTests.swift */; };
 		93C7675E1B2026D800033DC4 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7675D1B2026D800033DC4 /* SidePanelViewController.swift */; };
 		93C767601B20286900033DC4 /* OldCenterPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7675F1B20286900033DC4 /* OldCenterPanelViewController.swift */; };
+		93E9E7651B3A6D5000A83A08 /* KeyboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9E7641B3A6D5000A83A08 /* KeyboardPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		932A66511B2D21EE00DAF180 /* KeyboardNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNote.swift; sourceTree = "<group>"; };
+		932A66531B2D39AA00DAF180 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		937025A51B27F80800429BFE /* CellPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPadView.swift; sourceTree = "<group>"; };
 		937025A61B27F80800429BFE /* CellPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellPadView.xib; sourceTree = "<group>"; };
 		93C1ABB31B253C0B0068F079 /* CenterPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterPanelViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		93C767531B2018C600033DC4 /* the_MCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_MCTests.swift; sourceTree = "<group>"; };
 		93C7675D1B2026D800033DC4 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		93C7675F1B20286900033DC4 /* OldCenterPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldCenterPanelViewController.swift; sourceTree = "<group>"; };
+		93E9E7641B3A6D5000A83A08 /* KeyboardPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				93C7673B1B2018C600033DC4 /* Supporting Files */,
 				937025A51B27F80800429BFE /* CellPadView.swift */,
 				937025A61B27F80800429BFE /* CellPadView.xib */,
+				932A66511B2D21EE00DAF180 /* KeyboardNote.swift */,
+				932A66531B2D39AA00DAF180 /* MainViewController.swift */,
+				93E9E7641B3A6D5000A83A08 /* KeyboardPanel.swift */,
 			);
 			path = "the MC";
 			sourceTree = "<group>";
@@ -229,7 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C7675E1B2026D800033DC4 /* SidePanelViewController.swift in Sources */,
+				93E9E7651B3A6D5000A83A08 /* KeyboardPanel.swift in Sources */,
+				932A66541B2D39AA00DAF180 /* MainViewController.swift in Sources */,
 				93C767401B2018C600033DC4 /* ContainerViewController.swift in Sources */,
+				932A66521B2D21EE00DAF180 /* KeyboardNote.swift in Sources */,
 				93C1ABB51B253C0B0068F079 /* CenterPanelViewController.swift in Sources */,
 				93C767601B20286900033DC4 /* OldCenterPanelViewController.swift in Sources */,
 				937025A71B27F80800429BFE /* CellPadView.swift in Sources */,
