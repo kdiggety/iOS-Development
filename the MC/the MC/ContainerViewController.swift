@@ -17,6 +17,7 @@ enum SlideOutState {
 
 class ContainerViewController: UIViewController {
     
+    var panGestureRecognizer: UIPanGestureRecognizer!
     var centerNavigationController: UINavigationController!
     var centerViewController: CenterPanelViewController!
     var mainViewController: MainViewController!
@@ -47,7 +48,9 @@ class ContainerViewController: UIViewController {
         
         centerNavigationController.didMoveToParentViewController(self)
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        panGestureRecognizer.delegate = self
+        
         centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
     }
     
@@ -162,7 +165,32 @@ extension ContainerViewController: CenterViewControllerDelegate {
 extension ContainerViewController: UIGestureRecognizerDelegate {
     // MARK: Gesture recognizer
     
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        println("ContainerViewController.gestureRecognizerShouldBegin")
+        
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        println("ContainerViewController.gestureRecognizer.shouldReceiveTouch - touch.view.tag=\(touch.view.tag)")
+        
+        if(touch.view.tag == 123){
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer,
+        shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+            println("ContainerViewController.gestureRecognizer.shouldBeRequiredToFailByGestureRecognizer")
+
+            return true
+    }
+    
     func handlePanGesture(recognizer: UIPanGestureRecognizer) {
+        println("ContainerViewController.handlePanGesture - recognizer.state=\(recognizer.state)")
+        
         let gestureIsDraggingFromLeftToRight = (recognizer.velocityInView(view).x > 0)
         
         switch(recognizer.state) {

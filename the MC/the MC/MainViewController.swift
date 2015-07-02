@@ -40,7 +40,8 @@ class MainViewController: UIViewController {
         let width = view.bounds.width - 2.0 * margin
         //rootNote.frame = CGRect(x: margin, y: margin + topLayoutGuide.length,
           //  width: width, height: 31.0)
-        kbPanel.frame = CGRect(x: margin, y: margin + topLayoutGuide.length, width: width, height: view.bounds.width - 10)
+        //kbPanel.frame = CGRect(x: margin, y: margin + topLayoutGuide.length, width: width, height: view.bounds.width - 10)
+        kbPanel.frame = CGRect(x: view.bounds.width / 2 - width / 2, y: 200, width: width, height: 31.0 * 3.75 * 1.25)
     }
     
     override func didReceiveMemoryWarning() {
